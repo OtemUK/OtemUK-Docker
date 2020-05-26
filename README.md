@@ -9,15 +9,6 @@ A pretty simplified docker-compose workflow that sets up a LEMP network of conta
   - OtemUK-Docker
 ```
 
-## Set up
-
-1. `docker-compose up -d --build`
-2. `docker-compose run --rm composer install`
-3. `docker-compose run --rm npm install`
-4. `docker-compose run --rm npm run dev`
-5. `docker-compose run --rm artisan key:generate`
-6. `docker-compose run --rm artisan migrate`
-
 ## .env
 
 ```
@@ -35,6 +26,29 @@ DB_PORT=3306
 DB_DATABASE=homestead
 DB_USERNAME=homestead
 DB_PASSWORD=secret
+```
+
+## Set up
+
+1. `docker-compose up -d --build`
+2. `docker-compose run --rm composer install`
+3. `docker-compose run --rm npm install`
+4. `docker-compose run --rm npm run dev`
+5. `docker-compose run --rm artisan key:generate`
+6. `docker-compose run --rm artisan migrate`
+
+## Start / Stop server
+
+### Start
+
+```sh
+docker-compose up
+```
+
+### Stop
+
+```sh
+docker-compose down
 ```
 
 ## Usage
