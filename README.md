@@ -9,7 +9,15 @@ A pretty simplified docker-compose workflow that sets up a LEMP network of conta
   - OtemUK-Docker
 ```
 
-## .env
+## Clone repos
+
+```
+mkdir OtemUK;
+git clone git@github.com:OtemUK/OtemUK-Docker.git;
+git clone git@github.com:OtemUK/OtemUK-API.git;
+```
+
+## .env (OtemUK-API)
 
 ```
 APP_NAME=Laravel
