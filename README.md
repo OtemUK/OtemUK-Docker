@@ -1,6 +1,33 @@
 # docker-compose-laravel
 A pretty simplified docker-compose workflow that sets up a LEMP network of containers for local Laravel development. You can view the full article that inspired this repo [here](https://medium.com/@aschmelyun).
 
+## Set up
+
+1. `docker-compose up -d --build`
+2. `docker-compose run --rm composer install`
+3. `docker-compose run --rm npm install`
+4. `docker-compose run --rm npm run dev`
+5. `docker-compose run --rm artisan key:generate`
+6. `docker-compose run --rm artisan migrate`
+
+## .env
+
+```
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+LOG_CHANNEL=stack
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
 
 ## Usage
 
