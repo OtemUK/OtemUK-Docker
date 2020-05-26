@@ -39,13 +39,13 @@ DB_PASSWORD=secret
 
 ## Start / Stop server
 
-### Start
+### Start server
 
 ```sh
 docker-compose up
 ```
 
-### Stop
+### Stop server
 
 ```sh
 docker-compose down
