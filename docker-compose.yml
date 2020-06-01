@@ -3,6 +3,9 @@ version: '3'
 networks:
   laravel:
 
+volumes:
+  mysql:
+
 services:
   nginx:
     image: nginx:stable-alpine
@@ -35,7 +38,7 @@ services:
     networks:
       - laravel
     volumes:
-      - ./mysql:/var/lib/mysql
+      - mysql:/var/lib/mysql
 
   php:
     build:
